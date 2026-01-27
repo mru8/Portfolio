@@ -2,7 +2,7 @@
 A responsive personal portfolio website showcasing my frontend projects, skills and learning journey as a frontend developer.
 
 ## Live Demo
-Demo link will be added soon.
+[Click here to open Portfolio](https://mru8.github.io/Portfolio/)
 
 ## Tech Stack
 - HTML5
