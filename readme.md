@@ -1,14 +1,23 @@
-#Day 1 - 23 Jan 2026
--started building portfolio
--created html structure
--gave all section ids and classes
+# Personal Portfolio Website
+A responsive personal portfolio website showcasing my frontend projects, skills and learning journey as a frontend developer.
 
-#Day 2 - 24 Jan 2026
--started working on css
--created css variables
--css base styles
+## Live Demo
+Demo link will be added soon.
 
-#Day 3 - 25 Jan 2026
--completed basic css code
--making website responsive
--enhanced the links
+## Tech Stack
+- HTML5
+- CSS2
+- JavaScript
+- Git & Github
+
+## Projects
+- Pinterest UI Clone
+- UI Component Library
+
+## Purpose
+Built to practice frontend fundamentals, responsive design and showcase projects while learning and improving as a developer.
+
+## Contact
+- [GitHub](https://github.com/mru8)
+- [LinkedIn](https://www.linkedin.com/in/mrunal-bhoyar-2a49402b4/)
+- Email : mrunalbhoyar841@gmail.com
