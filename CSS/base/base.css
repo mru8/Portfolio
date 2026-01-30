@@ -1,0 +1,59 @@
+:root{
+    --bg-color: #313134;
+    --text-color: #fbf9f9;
+    --muted-text: #c2bbbb;
+    --primary-color: #c2bbbb;
+    --max-width: 900px;
+    --muted-color: #8fa1e8; 
+    --sidebar-width: 110px; 
+}
+
+/* Reset default styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* smooth scroll for any anchors */
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* General layout */
+
+header,
+section{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 30px 20px;
+/* 40 = top & bottom, 20 = right & left */
+/* if 4 values then top, right, bottom, left respectively */
+}
+
+.page{
+    margin-left: var(--sidebar-width);
+
+    /* To add a subtle left content gutter */
+    background: linear-gradient(
+        to right,
+        #242428 0,
+        #2f2f32 60px,
+        transparent 60px
+    );
+}
+
+.container{
+    max-width: 2200px;
+    /* controls line length */
+    padding: 3rem;
+}

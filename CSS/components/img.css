@@ -1,0 +1,39 @@
+
+#pinterest-thumb,
+#ui-dark,
+#ui-light{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-wrapper{
+    display: flex;
+    gap: 15px;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.mode{
+    position: relative;
+}
+
+.mode span{
+    /* position: absolute; */
+    top: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.6) ;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.mode img{
+    width: 220px;
+    border-radius: 10px;
+}

@@ -1,0 +1,13 @@
+
+.sidebar{
+    display: flex;
+    flex-direction:column;
+    width: var(--sidebar-width);
+    min-width: 50px;
+    height: fit-content;
+    position:fixed;
+    left: 0;
+    top: 0;
+
+    padding: 1rem;
+}

@@ -1,0 +1,51 @@
+
+/* MAKE WEBSITE RESPONSIVE */
+
+@media (max-width: 768px){
+    .skills-group{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .actions{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .actions.btn-primary{
+        width: 80%;  
+        text-align: center;
+    }
+
+    .project{
+        width: 100%;
+        padding: 15px;
+    }
+    .project-links a{
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+}
+
+/* GENERAL ADJUSTMENTS FOR SMALLER SCREENS */
+
+@media (max-width: 480px){
+    body{
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    header,
+    section{
+        padding: 30px 15px;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+
+    h3{
+        font-size: 1.1rem;
+    }
+
+}

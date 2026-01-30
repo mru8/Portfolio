@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mrunal Bhoyar | Frontend Developer</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./CSS/base/base.css">
+    <link rel="stylesheet" href="./CSS/base/resp.css">
+    <link rel="stylesheet" href="./CSS/components/buttons.css">
+    <link rel="stylesheet" href="./CSS/components/headings.css">
+    <link rel="stylesheet" href="./CSS/components/img.css">
+    <link rel="stylesheet" href="./CSS/components/links.css">
+    <link rel="stylesheet" href="./CSS/layout/header.css">
+    <link rel="stylesheet" href="./CSS/layout/navbar.css">
+    <link rel="stylesheet" href="./CSS/sections/contact.css">
+    <link rel="stylesheet" href="./CSS/sections/projects.css">
+    <link rel="stylesheet" href="./CSS/sections/skills.css">
+    <link rel="stylesheet" href="./CSS/themes/themes.css">
 </head>
 <body>
-    <nav class="navbar">
+    
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch">Light Mode</label>
+    </div>
+
+    <nav class="sidebar">
         <a href="#home">Home</a>
         <a href="#about-me">About</a>
         <a href="#skills">Skills</a>
@@ -15,7 +32,9 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <header id="home">
+<main class="page">
+    <div class="container">
+        <header id="home">
         <h2>Mrunal Bhoyar</h2>
         <h3>Frontend Developer</h3>
 
@@ -25,69 +44,99 @@
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-primary">Contact Me</a>
         </div>
-    </header>
-        
-    <section id="about-me" class="section">
-        <h2>About Me</h2>
-        <p>I’m a frontend developer focused on building responsive and user-friendly web applications.
-            I enjoy turning ideas into real projects while continuously learning and improving my skills.</p>
-    </section>
+        </header>
+   
 
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="skills-group">
-            <h3>Frontend</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Bootstrap</li>
-                <li>TypeScript</li>
-                <li>Angular</li>
-            </ul>
-            
-            <h3>Backend</h3>
-            <ul>
-                <li>Python(Basic)</li>
-                <li>SQL</li>
-            </ul>
-            
-            <h3>Tools</h3>
-            <ul>
-                <li>Git, GitHub</li>
-                <li>VS Code</li>
-            </ul>
+        <section id="about-me" class="section">
+            <h2>About Me</h2>
+            <p>I’m a frontend developer focused on building responsive and user-friendly web applications.
+            I enjoy turning ideas into real projects while continuously learning and improving my skills.</p>
         </section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
+        <section id="skills" class="section">
+            <h2>Skills</h2>
 
-        <div class="project">
-            <img id="pinterest-thumb" src="./Images/Pinterest UI.png" alt="Pinterest UI Clone">
-            <h3>Pinterest UI Clone</h3>
-            <p>A responsive UI clone inspired by Pinterest, built using HTML, CSS,
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Bootstrap</span>
+                    <span>TypeScript</span>
+                    <span>Angular</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <div class="skill-tags">
+                    <span>Python</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <div class="skill-tags">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>VSCode</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <div class="project-img">
+                    <img id="pinterest-thumb" src="./Images/Pinterest UI.png" alt="Pinterest UI Clone">
+                </div>
+
+                <div class="project-content">
+                    <h3>Pinterest UI Clone</h3>
+                    <p>A responsive UI clone inspired by Pinterest, built using HTML, CSS,
         and JavaScript.</p>
         
-            <div class="project-links">
-                <a href="https://mru8.github.io/pinterest-ui-clone/" target="_blank">Live Demo</a>
-                <a href="https://github.com/mru8/pinterest-ui-clone/" target="_blank">GitHub</a>
+                    <div class="project-links">
+                        <a href="https://mru8.github.io/pinterest-ui-clone/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/mru8/pinterest-ui-clone/" target="_blank">GitHub</a>
+                    </div>
+                </div>                   
             </div>
-        </div>
 
-        <div class="project">
-            <img id="ui-dark" src="./Images/UI Dark Mode.png" alt="UI-Component-Library (Dark Mode)">
-            <img id="ui-light" src="./Images/UI Light Mode.png" alt="UI-Component-Library (Light Mode)">
-            <h3>UI-Component-Library</h3>
-            <p>A modular UI component library designed to speed up development while maintaining clean design and consistent user experience.</p>
+            <div class="project">
+                <div class="project-img">
+                    <div class="image-wrapper">
+                        <div class="mode mode-dark">
+                            <span>Dark Mode</span>
+                            <img id="ui-dark" src="./Images/UI Dark Mode.png" alt="UI-Component-Library (Dark Mode)">
+                        </div>
+
+                        <div class="mode mode-light">
+                            <span>Light Mode</span>
+                            <img id="ui-light" src="./Images/UI Light Mode.png" alt="UI-Component-Library (Light Mode)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <h3>UI-Component-Library</h3>
+                <p>A modular UI component library designed to speed up development while maintaining clean design and consistent user experience.</p>
             
-            <div class="project-links">
-                <a href="https://mru8.github.io/ui-component-library/" target="_blank">Live Demo</a>
-                <a href="https://github.com/mru8" target="_blank">GitHub</a>
+                <div class="project-links">
+                    <a href="https://mru8.github.io/ui-component-library/" target="_blank">Live Demo</a>
+                    <a href="https://github.com/mru8" target="_blank">GitHub</a>
+                </div>
+                </div>
+                
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <section id="contact" class="section">
+     <section id="contact" class="section">
         <h2>Contact</h2>
 
         <div class="links">
@@ -96,6 +145,12 @@
             <a href="mailto:mrunalbhoyar841@gmail.com">Email</a>
         </div>
     </section>
+    </div>
+   
+    
+</main>
+
+    
     
 
 </body>

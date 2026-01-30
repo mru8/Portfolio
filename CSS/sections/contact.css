@@ -1,0 +1,12 @@
+
+/* Contact Section */
+.links a{
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.links a:hover{
+    text-decoration: underline;
+}

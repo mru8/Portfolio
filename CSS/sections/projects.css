@@ -1,0 +1,61 @@
+
+/* Projects section */
+#projects{
+    background-color: #727273;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display:grid;
+    width: var(--max-width);
+}
+
+.project img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.project-links a{
+    margin-right: 12px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.project-links a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.project{
+    background-color: #2a2a32;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display:flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /* makes both sides equal height */
+    gap: 20px;
+    width: 834px;
+}
+
+.project-content{
+    flex: 1;
+}
+
+.project-img{
+    flex: 1;
+    display: flex;
+}
+
+.project-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ensures image fills height */
+    border-radius: 10px;
+}

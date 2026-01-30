@@ -1,0 +1,8 @@
+.theme-toggle{
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    z-index: 1000;              
+    /* z-index:1000; => above everything
+       position: fixed; => relative to viewport */
+}
