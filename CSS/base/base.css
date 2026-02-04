@@ -1,11 +1,15 @@
 :root{
-    --bg-color: #313134;
+    --pg-bg: #3a3a3c;
     --text-color: #fbf9f9;
     --muted-text: #c2bbbb;
-    --primary-color: #c2bbbb;
+    --primary-color: hsl(0, 2%, 73%);
     --max-width: 900px;
-    --muted-color: #8fa1e8; 
     --sidebar-width: 110px; 
+    --card-color: #353131;
+    --card-bg: black;
+    --button-hover: #746f6f;
+    --project-bg: #727273;
+    --border-shadow: rgba(255, 255, 255, 0.1);
 }
 
 /* Reset default styles */
@@ -17,11 +21,13 @@
 
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: var(--bg-color);
+    background-color: var(--pg-bg);
     color: var(--text-color);
     line-height: 1.8;
     font-size: 16px;
 }
+
+
 
 /* smooth scroll for any anchors */
 html{
@@ -46,9 +52,9 @@ section{
     /* To add a subtle left content gutter */
     background: linear-gradient(
         to right,
-        #242428 0,
-        #2f2f32 60px,
-        transparent 60px
+        var(--card-color) 0,
+        var(--button-hover) 30px,
+        transparent 30px
     );
 }
 
@@ -56,4 +62,22 @@ section{
     max-width: 2200px;
     /* controls line length */
     padding: 3rem;
+}
+
+#theme-toggle {
+    margin-left: auto;
+
+    background: #f1f5f9;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+
+    cursor: progress;
+    font-size: 0.85rem;
+    color: #1f2937;
+}
+
+/* Hover */
+#theme-toggle:hover{
+    background: #e2e8f0;
 }

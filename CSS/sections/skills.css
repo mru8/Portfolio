@@ -1,15 +1,20 @@
 
 /* Skills Section */
 #skills{
-    background-color: #727273;
+    background-color: var(--card-bg);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
     margin-top: 40px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px inset var(--skills-border);
     display:grid;
     width: var(--max-width);
+}
+
+#skills:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--border-shadow);
 }
 
 #skills h2{
@@ -34,16 +39,17 @@
 
 .skill-tags span{
     padding: 8px 14px;
-    border-radius: 20px;
-    background-color: #727273;
-    color: #fff;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     font-size: 14px;
-    border: 1px solid #444;
+    border: 1px solid var(--border-shadow);
     transition: 0.3s ease;
 }
 
 .skill-tags span:hover{
-    background-color: var(--primary-color);
-    color: #000;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     cursor: cell;
+    border: 1px solid var(--button-hover);
 }

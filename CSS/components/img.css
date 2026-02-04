@@ -8,7 +8,7 @@
     border-radius: 8px;
     display: block;
     margin: 0 auto 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--pg-bg);
 }
 
 .image-wrapper{
@@ -26,8 +26,8 @@
     /* position: absolute; */
     top: 8px;
     left: 8px;
-    background: rgba(0,0,0,0.6) ;
-    color: white;
+    background: var(--pg-bg) ;
+    color: var(--text-color);
     font-size: 12px;
     padding: 4px 8px;
     border-radius: 6px;
@@ -35,5 +35,18 @@
 
 .mode img{
     width: 220px;
+    border-radius: 10px;
+}
+
+.project-img{
+    flex: 1;
+    display: flex;
+}
+
+.project-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ensures image fills height */
     border-radius: 10px;
 }

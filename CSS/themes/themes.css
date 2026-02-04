@@ -1,8 +1,241 @@
-.theme-toggle{
+#theme-toggle{
     position: fixed;
     top: 16px;
     right: 20px;
     z-index: 1000;              
     /* z-index:1000; => above everything
        position: fixed; => relative to viewport */
+}
+
+body.light-mode{
+    --bg-page: #ffffff;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.08);
+
+    --primary: #4f6ef7;
+}
+
+body.light-mode header{
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    padding: 5rem 0 4rem;
+    margin-bottom: 3rem;
+
+    display: grid;
+    gap: 1.2rem;
+}
+
+
+body.light-mode header h2{
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
+    font-weight: 700;
+    color: #1f2937;
+}
+
+body.light-mode header h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+body.light-mode header .tagline{
+    max-width: 520px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #6b7280;
+}
+
+/* Buttons */
+body.light-mode header .actions{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Primary */
+body.light-mode .btn-primary{
+    padding: 0.7rem 1.4rem;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+/* Filled button */
+body.light-mode .actions .btn-primary:first-child {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* Outline button */
+body.light-mode .actions .btn-primary:last-child{
+    background: transparent;
+    color: #2563eb;
+    border: 1px solid rgba(37, 99, 235, 0.4);
+}
+
+/* Sections */
+
+body.light-mode .section{
+    padding: 3.5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .section h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+body.light-mode .section p{
+    max-width: 650px;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+/* Project Cards */
+body.light-mode .project{
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    margin-bottom: 2rem;
+}
+
+/* Skill tags */
+body.light-mode .skill-tags span{
+    background: #f1f5f9;
+    color: #1f2937;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+/* Contact section */
+body.light-mode #contact{
+    background: #f9fafb;
+}
+
+body.light-mode .links a{
+    color: #2563eb;
+    font-weight: 500;
+}
+
+body.light-mode .page{
+    margin-left: 0;
+    background: #f9fafb;
+}
+
+body.light-mode .container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+body.light-mode .sidebar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0 2rem;
+    background: #ffffff;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+body.light-mode .sidebar a{
+    height: 64px;
+    display: flex;
+    align-items: center;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1;
+
+    color: #374151;
+    text-decoration: none;
+    position:relative;
+}
+
+
+
+/* Active underline style */
+body.light-mode .sidebar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+body.light-mode .sidebar a:hover::after{
+    width: 100%;
+}
+
+body.light-mode .page{
+    margin-left: 0;
+    padding-top: 64px;
+    /* padding top = navbar height */
+}
+
+/* Move toggle to right */
+body.light-mode #theme-toggle {
+    margin-left: auto;
+    position: static;
+
+    background: #f1f5f9;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 99px;
+
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #1f2937;
+    white-space: nowrap;
+}
+
+/* Hover */
+body.light-mode #theme-toggle:hover{
+    background: #e2e8f0;
+}
+
+body.light-mode header{
+    padding-top: 4rem;
+}
+
+/* This forces all navbar links to behave exactly the same way */
+body.light-mode .sidebar a[href] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 64px !important;
+    margin: 0 !important;      /* Clears any accidental margins */
+    padding: 0 15px !important; 
+    position: relative !important;
+    top: 0 !important;         /* Forces it down if it's jumping up */
+    line-height: 64px !important; /* Forces text to the center of the bar */
+}
+
+/* This ensures the Toggle button doesn't mess with the vertical line */
+body.light-mode #theme-toggle {
+    margin-left: auto !important;
+    align-self: center !important;
+    position: relative !important;
+    top: 0 !important;
 }

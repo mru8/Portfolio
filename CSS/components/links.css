@@ -5,9 +5,12 @@ a{
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease, text-decoration 0.2s ease;
+    margin-right: 12px;
 }
 /* text-decor:none in a{} removes browsers default underlines*/
 
 a:hover{
     text-decoration: underline;
+    color: var(--text-color);
 }
+
