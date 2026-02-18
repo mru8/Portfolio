@@ -81,3 +81,23 @@ section{
 #theme-toggle:hover{
     background: #e2e8f0;
 }
+
+/* Inside resp.css */
+
+/* Tablet and Mobile adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative; /* Moves it from the side to the top */
+    }
+    
+    .sidebar a {
+        display: inline-block; /* Makes links sit side-by-side instead of a list */
+        padding: 10px;
+    }
+
+    .container {
+        margin-left: 0; /* Removes space meant for the sidebar */
+    }
+}
