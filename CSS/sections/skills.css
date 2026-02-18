@@ -9,7 +9,8 @@
     backdrop-filter: blur(10px);
     border: 1px inset var(--skills-border);
     display:grid;
-    width: var(--max-width);
+    max-width: var(--max-width);
+    width: 100%;
 }
 
 #skills:hover{

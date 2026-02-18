@@ -2,6 +2,15 @@
 /* MAKE WEBSITE RESPONSIVE */
 
 @media (max-width: 768px){
+    .page{
+        margin-left: 0 !important;
+        padding-top: 0;
+    }
+
+    .container{
+        padding: 15px;
+        width: 100%;
+    }
     .skills-group{
         flex-direction: column;
         gap: 20px;
@@ -18,12 +27,36 @@
     }
 
     .project{
-        width: 100%;
-        padding: 15px;
+        width: 100% !important;
+        flex-direction: column;
+        height: auto;
+        /* padding: 15px; */
     }
+
+    .project-img, .project-content{
+        width: 100%;
+    }
+
     .project-links a{
         display: inline-block;
         margin-bottom: 8px;
+    }
+
+    .sidebar{
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .image-wrapper{
+        flex-direction: column;
+    }
+
+    .skill-tags {
+        justify-content: center;
     }
 }
 
