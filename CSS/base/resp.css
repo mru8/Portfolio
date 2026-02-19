@@ -2,6 +2,27 @@
 /* MAKE WEBSITE RESPONSIVE */
 
 @media (max-width: 768px){
+    body.light-mode header{
+        width: 100% !important;
+        padding: 3rem 1.5rem !important;
+        text-align: center; 
+    }
+
+    body.light-mode header .tagline {
+        margin: 0 auto 1.5rem;
+    }
+
+    body.light-mode header .actions{
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+    }
+
+    body.light-mode .btn-primary{
+        width: 100%;
+        text-align: center;
+    }
+
     .page{
         margin-left: 0 !important;
         padding-top: 0;
@@ -81,4 +102,30 @@
         font-size: 1.1rem;
     }
 
+}
+
+@media (max-width: 768px) {
+    /* 1. Ensure the sidebar stays the correct width */
+    .sidebar {
+        width: var(--sidebar-width);
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        display: flex; /* Keep it as a side menu */
+        flex-direction: column;
+    }
+
+    /* 2. FORCE the page to stay to the right */
+    .page, body.light-mode .page {
+        margin-left: var(--sidebar-width) !important; 
+        width: calc(100% - var(--sidebar-width));
+    }
+
+    /* 3. FIX the overflowing content boxes */
+    .project, #skills, #projects, header {
+        width: 100% !important; /* Forces boxes to fit the remaining space */
+        max-width: none;
+        margin: 10px 0;
+    }
 }

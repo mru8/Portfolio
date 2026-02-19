@@ -126,7 +126,7 @@ body.light-mode .links a{
 }
 
 body.light-mode .page{
-    margin-left: 0;
+    /* margin-left: 0; */
     background: #f9fafb;
 }
 

@@ -4,15 +4,15 @@
     flex-direction:column;
 
     width: var(--sidebar-width);
-    min-width: 180px;
     height: 100vh;
-    /* height:100vh fixes incomplete feel */
 
     position:fixed;
     left: 0;
     top: 0;
 
-    padding:2rem 1.5rem;
+    z-index: 1000;
+
+    padding:2rem 0;
 
     background: #2b2b2e;
     border-right: 1px solid rgba(255, 255, 255, 0.08);
@@ -24,10 +24,22 @@
     letter-spacing: 0.12rem;
     color: rgba(255, 255, 255, 0.4);
     margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    display: block;
 }
 
 .sidebar a{
-    padding: 0.6rem 0.75rem;
+    display: block;
+    /* This is making the link fill sidebar width */
+
+    padding: 0.6rem 1.5rem;
+    /* padding: 0.8rem 1.2rem; */
+    width: 100%;
+    white-space: nowrap;
+    /* to make sure text wont wrap awkwardly */
+
+    box-sizing: border-box;
+
     margin-bottom: 0.4rem;
 
     color: rgba(255, 255, 255, 0.75);
@@ -73,3 +85,6 @@
     font-weight: 500;
 }
 
+#theme-toggle{
+    z-index: 1001;
+}

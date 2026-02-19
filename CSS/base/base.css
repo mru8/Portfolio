@@ -36,6 +36,10 @@ html{
 
 
 /* General layout */
+header {
+    position: relative;
+    z-index: 1;
+}
 
 header,
 section{
@@ -43,25 +47,24 @@ section{
     margin: 0 auto;
     padding: 30px 20px;
     width: 100%;
-/* 40 = top & bottom, 20 = right & left */
-/* if 4 values then top, right, bottom, left respectively */
 }
 
 .page{
     margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
 
     /* To add a subtle left content gutter */
     background: linear-gradient(
         to right,
         var(--card-color) 0,
-        var(--button-hover) 30px,
-        transparent 30px
+        var(--button-hover) 1px,
+        transparent 1px
     );
+    min-height: 100vh;
 }
 
 .container{
     max-width: 2200px;
-    /* controls line length */
     padding: 3rem;
 }
 
@@ -78,27 +81,7 @@ section{
     color: #1f2937;
 }
 
-/* Hover */
 #theme-toggle:hover{
     background: #e2e8f0;
 }
 
-/* Inside resp.css */
-
-/* Tablet and Mobile adjustments */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative; /* Moves it from the side to the top */
-    }
-    
-    .sidebar a {
-        display: inline-block; /* Makes links sit side-by-side instead of a list */
-        padding: 10px;
-    }
-
-    .container {
-        margin-left: 0; /* Removes space meant for the sidebar */
-    }
-}
