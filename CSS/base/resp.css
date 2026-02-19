@@ -1,131 +1,128 @@
-
-/* MAKE WEBSITE RESPONSIVE */
-
-@media (max-width: 768px){
-    body.light-mode header{
-        width: 100% !important;
-        padding: 3rem 1.5rem !important;
-        text-align: center; 
-    }
-
-    body.light-mode header .tagline {
-        margin: 0 auto 1.5rem;
-    }
-
-    body.light-mode header .actions{
-        flex-direction: column;
-        width: 100%;
-        gap: 0.8rem;
-    }
-
-    body.light-mode .btn-primary{
-        width: 100%;
-        text-align: center;
-    }
-
-    .page{
-        margin-left: 0 !important;
-        padding-top: 0;
-    }
-
-    .container{
+/* --- 1. TABLET & MOBILE (768px and below) --- */
+@media (max-width: 768px) {
+    
+    /* UNIVERSAL CHANGES (Both Modes) */
+    .container {
         padding: 15px;
         width: 100%;
     }
-    .skills-group{
-        flex-direction: column;
-        gap: 20px;
-    }
 
-    .actions{
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-    .actions.btn-primary{
-        width: 80%;  
-        text-align: center;
-    }
-
-    .project{
+    .project {
         width: 100% !important;
-        flex-direction: column;
+        flex-direction: column !important; /* Stack image and text */
         height: auto;
-        /* padding: 15px; */
+        max-width: none;
+        margin: 10px 0;
     }
 
-    .project-img, .project-content{
+    .project-img, 
+    .project-content {
         width: 100%;
     }
 
-    .project-links a{
-        display: inline-block;
-        margin-bottom: 8px;
-    }
-
-    .sidebar{
-        width: 100%;
-        height: auto;
-        position: relative;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-
-    .image-wrapper{
+    .image-wrapper {
         flex-direction: column;
+        gap: 15px;
     }
 
     .skill-tags {
         justify-content: center;
     }
-}
 
-/* GENERAL ADJUSTMENTS FOR SMALLER SCREENS */
-
-@media (max-width: 480px){
-    body{
-        font-size: 15px;
-        line-height: 1.6;
+    #skills, #projects, header {
+        width: 100% !important;
+        max-width: none;
+        margin: 10px 0;
     }
 
-    header,
-    section{
-        padding: 30px 15px;
-    }
-
-    h2{
-        font-size: 1.6rem;
-    }
-
-    h3{
-        font-size: 1.1rem;
-    }
-
-}
-
-@media (max-width: 768px) {
-    /* 1. Ensure the sidebar stays the correct width */
-    .sidebar {
-        width: var(--sidebar-width);
+    /* --- DARK MODE SPECIFIC (Keep Sidebar) --- */
+    body:not(.light-mode) .sidebar {
+        width: 70px; /* Slimmer for small screens */
         position: fixed;
         left: 0;
         top: 0;
         height: 100vh;
-        display: flex; /* Keep it as a side menu */
+        display: flex;
         flex-direction: column;
+        padding: 1rem 0;
     }
 
-    /* 2. FORCE the page to stay to the right */
-    .page, body.light-mode .page {
-        margin-left: var(--sidebar-width) !important; 
-        width: calc(100% - var(--sidebar-width));
+    body:not(.light-mode) .sidebar a {
+        font-size: 11px;
+        padding: 10px 5px;
+        text-align: center;
+        white-space: normal; /* Allow text to wrap if name is long */
     }
 
-    /* 3. FIX the overflowing content boxes */
-    .project, #skills, #projects, header {
-        width: 100% !important; /* Forces boxes to fit the remaining space */
-        max-width: none;
-        margin: 10px 0;
+    body:not(.light-mode) .page {
+        margin-left: 70px !important; 
+        width: calc(100% - 70px) !important;
+        padding-top: 0;
+    }
+
+    body:not(.light-mode) .actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* --- LIGHT MODE SPECIFIC (Top Bar Spacing) --- */
+    body.light-mode .sidebar {
+        height: auto;
+        padding: 0 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    body.light-mode .sidebar a {
+        font-size: 0.85rem;
+        padding: 5px !important;
+        height: auto !important;
+        line-height: normal !important;
+    }
+
+    body.light-mode .page {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    body.light-mode header {
+        padding: 3rem 1.5rem !important;
+        text-align: center;
+    }
+
+    body.light-mode header .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* --- 2. SMALL MOBILE (480px and below) --- */
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    header, section {
+        padding: 25px 15px !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Force buttons to be full width for easy tapping */
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Make the Light Mode toggle fit better */
+    body.light-mode #theme-toggle {
+        margin: 10px auto !important;
+        width: 90%;
     }
 }

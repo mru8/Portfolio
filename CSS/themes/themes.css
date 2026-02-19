@@ -137,40 +137,46 @@ body.light-mode .container{
 }
 
 body.light-mode .sidebar{
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    z-index: 1000;
 
     width: 100%;
-    height: 64px;
+    height: 70px;
 
     display: flex;
     flex-direction:row;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
 
     padding: 0 2rem;
     background: #ffffff;
-
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 body.light-mode .sidebar a{
-    height: 64px;
-    display: flex;
+    height: auto;
+    width: auto;
+    display: inline-flex;
     align-items: center;
+    padding: 0.5rem 1 rem;
 
     font-size: 0.95rem;
     font-weight: 500;
-    line-height: 1;
+    /* line-height: 1; */
 
     color: #374151;
     text-decoration: none;
-    position:relative;
+    /* position:relative; */
 }
 
-
+body.light-mode .sidebar::before{
+    display: none;
+}
 
 /* Active underline style */
 body.light-mode .sidebar a::after{
@@ -189,14 +195,15 @@ body.light-mode .sidebar a:hover::after{
 }
 
 body.light-mode .page{
-    margin-left: 0;
-    padding-top: 64px;
+    margin-left: 0 !important;
+    width: 100%;
+    padding-top: 80px;
     /* padding top = navbar height */
 }
 
 /* Move toggle to right */
 body.light-mode #theme-toggle {
-    margin-left: auto;
+    /* margin-left: auto;
     position: static;
 
     background: #f1f5f9;
@@ -207,7 +214,17 @@ body.light-mode #theme-toggle {
     cursor: pointer;
     font-size: 0.85rem;
     color: #1f2937;
-    white-space: nowrap;
+    white-space: nowrap; */
+
+    position: static;
+    margin-left: 2rem;
+    background: #f1f5f9;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 99px;
+    color: #1f2937;
+    cursor: pointer;
+
 }
 
 /* Hover */
